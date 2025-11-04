@@ -1,0 +1,59 @@
+---
+const arrayCards = [
+  {
+    title: 'Jump',
+    canvaWeb: 'https://www.canva.com/design/DAG2zN9sKVI/JPGxx_WkE3GmA2zMtJbIGQ/view?utm_content=DAG2zN9sKVI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h0b98b4c908',
+    localImage: '/assets/jump.avif',
+    id: '01'
+  },
+  {
+    title: 'Curve Text',
+    canvaWeb: 'https://www.canva.com/design/DAG3ASdM3mw/mlXKEzuUh9zoCXH0cGR6bQ/view?utm_content=DAG3ASdM3mw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hcd5298899d',
+    localImage: '/assets/CurveText.avif',
+    id: '02'
+  },
+  {
+    title: 'TypeCurve Plugin',
+    canvaWeb: 'https://www.canva.com/design/DAG3Adt0Yek/pvB4MuFFbWzc3HqySbp_Iw/view?utm_content=DAG3Adt0Yek&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h000a542345',
+    localImage: '/assets/TypeCurvePlugin.avif',
+    id: '03'
+  },
+  {
+    title: 'Code QR with Canvas',
+    canvaWeb: 'https://www.canva.com/design/DAG3qfvzJrI/-wqnBHUZirWFxVgq7oi3tA/view?utm_content=DAG3qfvzJrI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h846f9f08a7',
+    localImage: '/assets/code-qr-with-canvas.avif',
+    id: '04'
+  },
+  {
+    title: 'Warp Bush App Practice',
+    canvaWeb: 'https://www.canva.com/design/DAG3u422fLw/jqmEHtGoI-sKzFRhzmTF9A/view?utm_content=DAG3u422fLw&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd7a71d6d34',
+    localImage: '/assets/warp-bush.avif',
+    id: '05'
+  },
+  {
+    title: '',
+    canvaWeb: '',
+    localImage: '/assets/.avif',
+    id: '06'
+  },
+];
+---
+
+<section class="am-container-cards">
+  {
+    arrayCards.map(({ id, localImage, canvaWeb, title }) => (
+      <aside class='card' />
+    ))
+  }
+</section>
+
+<style>
+  .am-container-cards {
+    min-height: 100vh;
+    display: grid;
+    padding: 2.2vmax;
+    gap: 2.2vmax;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17vmax, 1fr));
+  }
+</style>
