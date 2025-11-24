@@ -2,15 +2,17 @@
 import { baseUrl } from '@/utils/functions';
 import { lengthOfProjects } from '@/utils/data';
 const title = `${lengthOfProjects} Designs With Canva - Part 2`;
-const logo = baseUrl('/assets/css-logo.svg');
+const logo = baseUrl('/assets/canva-isotopic-logo.svg');
 ---
 
 <section class='am-hero'>
-  <!--   <h1>
-    20 PROJECTS WITH CSS <img src={logo} alt='Logo' />
-  </h1> -->
-  <!-- <h1>shadow<br />text<br />effect</h1> -->
-  <h1>{title}</h1>
+  <h1>
+    {lengthOfProjects} Designs With <img
+      src={logo}
+      alt='Logo'
+      class='am-logo'
+    />anva - Part 2
+  </h1>
 </section>
 <style>
   .am-hero {
@@ -47,21 +49,9 @@ const logo = baseUrl('/assets/css-logo.svg');
         hsl(0 0% 50% / 0.75);
   }
 
-  /* h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 5vmax;
-    text-align: center;
-    text-wrap: balance;
-    color: transparent;
-    background-image: var(--gradient);
-    background-clip: text;
-
-    img {
-      width: 4vmax;
-      transform: translateY(0.3vmax);
-    }
-  } */
+  .am-logo {
+    width: 4vmax;
+    position: relative;
+    top: 0.6vmax;
+  }
 </style>
