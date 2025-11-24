@@ -1,20 +1,53 @@
 ---
 import { baseUrl } from '@/utils/functions';
+import { lengthOfProjects } from '@/utils/data';
+const title = `${lengthOfProjects} Designs With Canva - Part 2`;
 const logo = baseUrl('/assets/css-logo.svg');
 ---
 
-<section class="am-hero">
-  <h1>
+<section class='am-hero'>
+  <!--   <h1>
     20 PROJECTS WITH CSS <img src={logo} alt='Logo' />
-  </h1>
+  </h1> -->
+  <!-- <h1>shadow<br />text<br />effect</h1> -->
+  <h1>{title}</h1>
 </section>
 <style>
   .am-hero {
     height: 100vh;
     position: relative;
+    pointer-events: none;
+    display: grid;
+    place-items: center;
   }
 
   h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 4vmax;
+    line-height: 1;
+    margin: 0;
+    color: hsl(293, 32%, 84%);
+    text-align: center;
+    letter-spacing: 0.039vmax;
+    --light-pos-x: 1.5;
+    --light-pos-y: -1.5;
+    --rim-size: 0.01vmax;
+    --shadow-offset: 0.104vmax;
+    --shadow-blur: 0.052vmax;
+
+    text-shadow:
+      calc(max(var(--rim-size), 0.065vmax) * var(--light-pos-x))
+        calc(max(var(--rim-size), 0.065vmax) * var(--light-pos-y))
+        hsl(307, 79%, 55%),
+      calc(max(var(--rim-size), 0.065vmax) * var(--light-pos-x) * -1)
+        calc(max(var(--rim-size), 0.065vmax) * var(--light-pos-y) * -1)
+        hsl(270, 56%, 50%),
+      calc(var(--shadow-offset) * var(--light-pos-x) * -1)
+        calc(var(--shadow-offset) * var(--light-pos-y) * -1) var(--shadow-blur)
+        hsl(0 0% 50% / 0.75);
+  }
+
+  /* h1 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -30,5 +63,5 @@ const logo = baseUrl('/assets/css-logo.svg');
       width: 4vmax;
       transform: translateY(0.3vmax);
     }
-  }
+  } */
 </style>
